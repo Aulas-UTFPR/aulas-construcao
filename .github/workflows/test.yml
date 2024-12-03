@@ -1,0 +1,40 @@
+name: Python CI with pytest and Coverage
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to trigger tests on
+  pull_request:
+    branches:
+      - main  # or the branch you want to trigger tests on
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # You can also use macos-latest or windows-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # Specify your Python version here
+    
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+        pip install pytest pytest-cov
+    
+    - name: Run tests with pytest and coverage
+      run: |
+        source venv/bin/activate
+        pytest --cov=code --cov-report=html
+    
+    - name: Upload code coverage report as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: htmlcov/
