@@ -1,24 +1,21 @@
-# Simple Codes
+# Exemplo Aula de Construção
 
-*Create a virtual environment:*
+*Criar o ambiente virtual:*
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip3 install pytest pytest-html pytest-cov
+pip3 install -r requirement.txt
 ```
 
-*Remove any trash:*
+*Criar o pre-commit hook (opcional):*
+
 ```bash
-find . -name "__pycache__" -exec rm -rf {} +
+pre-commit install
 ```
-<!-- 
-## Calculator
 
-Simple code example used for unit testing in `calculator` folder.
+*Executar flake8:*
 
 ```bash
-pip3 install -e .
-pytest
-pytest --cov=calculator --cov-report=html
-``` -->
+flake8 .
+```
