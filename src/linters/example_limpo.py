@@ -2,7 +2,7 @@
 
 
 def somar(a: int, b: int) -> int:
-    """Retorna a soma de dois inteiros."""
+    """Retorna a soma de dois inteiros.."""
     return a + b
 
 
