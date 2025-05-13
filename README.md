@@ -12,7 +12,7 @@ pip3 install pytest pytest-html pytest-cov
 ```bash
 find . -name "__pycache__" -exec rm -rf {} +
 ```
-
+<!-- 
 ## Calculator
 
 Simple code example used for unit testing in `calculator` folder.
@@ -21,4 +21,4 @@ Simple code example used for unit testing in `calculator` folder.
 pip3 install -e .
 pytest
 pytest --cov=calculator --cov-report=html
-```
+``` -->
