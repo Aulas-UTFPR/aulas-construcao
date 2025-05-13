@@ -1,5 +1,3 @@
--e git+ssh://git@github.com/Aulas-UTFPR/aulas-construcao.git@33f92f9b5418682f43631b3892f7e56c0ff9e83a#egg=calculator
--e git+ssh://git@github.com/Aulas-UTFPR/aulas-construcao.git@33f92f9b5418682f43631b3892f7e56c0ff9e83a#egg=code
 coverage==7.6.8
 iniconfig==2.0.0
 Jinja2==3.1.4
@@ -10,3 +8,9 @@ pytest==8.3.4
 pytest-cov==6.0.0
 pytest-html==4.1.1
 pytest-metadata==3.1.1
+pylint
+flake8
+mypy
+radon
+vulture
+pre-commit
