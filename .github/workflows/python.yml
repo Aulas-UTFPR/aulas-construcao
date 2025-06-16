@@ -2,9 +2,9 @@ name: Python Tests and Coverage
 
 on:
   push:
-    branches: [ main ]
+    branches: [ semestre_012025 ]
   pull_request:
-    branches: [ main ]
+    branches: [ semestre_012025 ]
 
 jobs:
   test:
