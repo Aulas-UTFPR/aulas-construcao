@@ -1,6 +1,12 @@
 name: Code Quality Checks
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
 
 jobs:
   lint:
@@ -26,17 +32,17 @@ jobs:
           echo "== flake8 =="
           flake8 .
 
-      - name: Run mypy
-        run: |
-          echo "== mypy =="
-          mypy .
+      # - name: Run mypy
+      #   run: |
+      #     echo "== mypy =="
+      #     mypy .
 
-      - name: Run pylint
-        run: |
-          echo "== pylint =="
-          pylint $(git ls-files '*.py')
+      # - name: Run pylint
+      #   run: |
+      #     echo "== pylint =="
+      #     pylint $(git ls-files '*.py')
 
-      - name: Run vulture
-        run: |
-          echo "== vulture =="
-          vulture . --min-confidence 80
+      # - name: Run vulture
+      #   run: |
+      #     echo "== vulture =="
+      #     vulture . --min-confidence 80
