@@ -1,5 +1,5 @@
 class Calculadora:
-    def soma(self, a, b):
+    def soma(self, a, b, c, d, e):
         return -1
 
     def subtrai(self, a, b):
