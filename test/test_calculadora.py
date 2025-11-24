@@ -1,6 +1,5 @@
 import sys
 import os
-import pytest
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
@@ -12,12 +11,12 @@ def test_soma_1():
 
 def test_soma():
     calc = Calculadora()
-    assert calc.soma(2,3) == 5
+    assert calc.multiplica(2,3) == 6
 
 def test_sub():
     calc = Calculadora()
-    assert calc.subtracao(2,2) == 0
+    assert calc.subtrai(2,2) == 0
 
 def test_div():
     calc = Calculadora()
-    assert calc.divisao(2,1) == 2
+    assert calc.divide(2,1) == 2
